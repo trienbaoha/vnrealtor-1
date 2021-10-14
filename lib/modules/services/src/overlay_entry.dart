@@ -13,22 +13,22 @@ class OverlaySupportEntry {
   final _OverlayKey _key;
   final GlobalKey<_AnimatedOverlayState> _stateKey;
 
-  static OverlaySupportEntry of(BuildContext context, {Widget requireForDebug}) {
-    final animatedOverlay = context.ancestorWidgetOfExactType(_AnimatedOverlay);
-    assert(() {
-      if (animatedOverlay == null && requireForDebug != null) {
-        throw FlutterError('No _AnimatedOverlay widget found.\n'
-            '${requireForDebug.runtimeType} require an OverlaySupportEntry for corrent operation\n'
-            'is that you called this method from the right scope? ');
-      }
-      return true;
-    }());
-
-    final key = animatedOverlay.key;
-    assert(key is GlobalKey);
-
-    return OverlaySupportEntry._entriesGlobal[key];
-  }
+  // static OverlaySupportEntry of(BuildContext context, {Widget requireForDebug}) {
+  //   final animatedOverlay = context.ancestorWidgetOfExactType(_AnimatedOverlay);
+  //   assert(() {
+  //     if (animatedOverlay == null && requireForDebug != null) {
+  //       throw FlutterError('No _AnimatedOverlay widget found.\n'
+  //           '${requireForDebug.runtimeType} require an OverlaySupportEntry for corrent operation\n'
+  //           'is that you called this method from the right scope? ');
+  //     }
+  //     return true;
+  //   }());
+  //
+  //   final key = animatedOverlay.key;
+  //   assert(key is GlobalKey);
+  //
+  //   return OverlaySupportEntry._entriesGlobal[key];
+  // }
 
   OverlaySupportEntry(this._entry, this._key, this._stateKey) {
     assert(() {

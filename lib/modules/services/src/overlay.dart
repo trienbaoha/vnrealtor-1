@@ -158,10 +158,10 @@ class OverlaySupport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     assert(() {
-      if (context.ancestorWidgetOfExactType(OverlaySupport) != null) {
-        throw FlutterError(
-            'There is already an OverlaySupport in the Widget tree.');
-      }
+     // assert if (context.ancestorWidgetOfExactType(OverlaySupport) != null) {
+     //    throw FlutterError(
+     //        'There is already an OverlaySupport in the Widget tree.');
+     //  }
       return true;
     }());
     return OverlaySupportTheme(

@@ -143,23 +143,23 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
         log('stopEffect $err');
       });
     } else {
-      _engine
-          ?.playEffect(
-              1,
-              await RtcEngineExtension.getAssetAbsolutePath(
-                  "assets/Sound_Horizon.mp3"),
-              -1,
-              1,
-              1,
-              100,
-              true)
-          ?.then((value) {
-        setState(() {
-          playEffect = true;
-        });
-      })?.catchError((err) {
-        log('playEffect $err');
-      });
+      // _engine
+      //     ?.playEffect(
+      //         1,
+      //         await RtcEngineExtension.getAssetAbsolutePath(
+      //             "assets/Sound_Horizon.mp3"),
+      //         -1,
+      //         1,
+      //         1,
+      //         100,
+      //         true)
+      //     ?.then((value) {
+      //   setState(() {
+      //     playEffect = true;
+      //   });
+      // })?.catchError((err) {
+      //   log('playEffect $err');
+      // });
     }
   }
 

@@ -16,7 +16,6 @@ import 'package:datcao/share/import.dart';
 import 'package:datcao/themes/lightTheme.dart';
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:datcao/utils/app_internalization.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:datcao/modules/inbox/inbox_bloc.dart';
 import 'package:flutter/services.dart';
 import 'share/widget/empty_widget.dart';
@@ -132,12 +131,7 @@ class _MyAppState extends State<MyApp> {
                 child: isOffline
                     ? MaterialApp(
                         debugShowCheckedModeBanner: false,
-                        localizationsDelegates: [
-                          const AppInternalizationlegate(),
-                          GlobalMaterialLocalizations.delegate,
-                          GlobalWidgetsLocalizations.delegate,
-                          GlobalCupertinoLocalizations.delegate,
-                        ],
+
                         supportedLocales: [
                           Locale('en', 'US'),
                           Locale('vi', 'VN'),
@@ -157,12 +151,6 @@ class _MyAppState extends State<MyApp> {
                     : OverlaySupport(
                         child: MaterialApp(
                           debugShowCheckedModeBanner: false,
-                          localizationsDelegates: [
-                            const AppInternalizationlegate(),
-                            GlobalMaterialLocalizations.delegate,
-                            GlobalWidgetsLocalizations.delegate,
-                            GlobalCupertinoLocalizations.delegate,
-                          ],
                           supportedLocales: [
                             Locale('en', 'US'),
                             Locale('vi', 'VN'),
